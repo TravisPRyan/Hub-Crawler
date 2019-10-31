@@ -1,3 +1,4 @@
-Push 4: Axios
-Move users to App component.
-Take users from github api. 
+Push 5: 
+Add loading component.
+Continued converting class based components into functional.
+Add environmental variables.

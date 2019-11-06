@@ -2,8 +2,8 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
-  --dark-color: #333333;
+  --primary-color: #070001;
+  --dark-color: #070001;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -19,8 +19,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: #fff;
 }
 
 a {
@@ -112,8 +112,9 @@ img {
 /* Cards */
 .card {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: black 2px outset;
   margin: 0.7rem 0;
+  background-color: rgb(37, 37, 37);
 }
 
 /* List */
@@ -412,3 +413,4 @@ table th {
     justify-content: center;
   }
 }
+

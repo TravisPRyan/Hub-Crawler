@@ -1,17 +1,21 @@
 import React, { Fragment, Component } from 'react';
 import Loading from '../layout/Loading';
+import Repos from '../repos/Repos';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
  
 export class User extends Component {
     componentDidMount() {
         this.props.getUser(this.props.match.params.login)
+        this.props.getUserRepos(this.props.match.params.login)
     }
 
     static propTypes = {
         loading: PropTypes.bool,
         user: PropTypes.object.isRequired,
+        repos: PropTypes.array.isRequired,
         getUser: PropTypes.func.isRequired,
+        getUserRepos: PropTypes.func.isRequired
     }
  
     render() {
@@ -31,7 +35,7 @@ export class User extends Component {
             hireable
         } = this.props.user;
  
-        const { loading } = this.props
+        const {loading, repos} = this.props
 
         if(loading) return <Loading/>
  
@@ -66,7 +70,7 @@ export class User extends Component {
                             </li>
                             <li>
                                 {blog && <Fragment>
-                                    <strong>Website:  </strong> {blog}
+                                    <strong>Website:  </strong> <a href={blog}>{blog}</a>
                                 </Fragment>}
                             </li>
                         </ul>
@@ -78,8 +82,10 @@ export class User extends Component {
                     <div className='badge badge-success'>Repos: {public_repos}</div>
                     <div className='badge badge-info'>Gists: {public_gists}</div>
                 </div>
-
-
+                <div className='card text-center'>
+                                <h3> {name}'s Repos:</h3>
+                </div>
+                <Repos repos={repos} />
             </Fragment>
             
         )

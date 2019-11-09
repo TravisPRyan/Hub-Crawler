@@ -1,1 +1,1 @@
-Push 14: Refactor. Convert Usercomponent from class based to functional using useEffect hook.
+Push 15: Refactor. Convert App from component to functional.

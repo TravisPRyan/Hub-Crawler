@@ -1,1 +1,1 @@
-Push 15: Refactor. Convert App from component to functional.
+Push 16: Implement preliminary context.

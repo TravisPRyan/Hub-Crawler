@@ -7,6 +7,7 @@ import Search from './components/users/Search';
 import axios from 'axios';
 import Alert from './components/layout/Alert';
 import About from './components/pages/About';
+import GithubState from './context/github/GithubState';
 import './App.css';
 
 
@@ -67,6 +68,7 @@ const App = () => {
 
 
   return (
+    <GithubState>
     <Router>
     <div className='App'>
       <Navbar title='Hub Crawler' icon='fab fa-github' /> 
@@ -103,6 +105,7 @@ const App = () => {
       </div>
     </div>
     </Router>
+    </GithubState>
   );
 };
 

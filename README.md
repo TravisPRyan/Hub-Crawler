@@ -1,1 +1,1 @@
-Push 17: Create reducer. Migrate searchUsers from App to githubState.
+Push 18: Move (search, get, clear) User state to Context. Move Repos state to Context. Move loading state to Context.

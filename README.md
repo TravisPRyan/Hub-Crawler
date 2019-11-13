@@ -1,1 +1,1 @@
-Push 18: Move (search, get, clear) User state to Context. Move Repos state to Context. Move loading state to Context.
+Push 19: Migrate Alert state. Various cleanup.
